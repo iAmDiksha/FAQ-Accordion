@@ -1,0 +1,74 @@
+:root{
+    --main-color:#e684a9;
+    --secondary-color: #fff;
+    --dark-color:deeppink;
+    --light-pink:rgb(230,132,169,0.7);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+body{
+    background-color:var(--main-color);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+header{
+    background-color: var(--secondary-color);
+    height: 80px;
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+}
+
+.container{
+    width: 60%;
+    margin: 10px auto;
+}
+
+.question{
+    background-color: var(--secondary-color);
+    color: black;
+    border: none;
+    border-left: 5px solid var(--dark-color);
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-top: 10px;
+}
+
+p{
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-left: 5px solid var(--dark-color);
+    display: none;
+}
+
+body ::selection{
+    background-color: deeppink;
+    color: white;
+}
+
+.active, button:hover{
+    color: deeppink;
+}
+
+.question.active:after{
+    content: "\25B2";
+    float: right;
+}
+
+.question:after{
+    content: "\25BC";
+    float: right;
+}
